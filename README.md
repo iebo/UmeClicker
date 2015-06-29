@@ -1,2 +1,2 @@
 # UmeClicker
-Cookie clicker but with umeås population
+Cookie clicker but with Umeås population
