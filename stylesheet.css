@@ -1,6 +1,8 @@
 #radhuset {
 	width: 40%;
 	margin: auto;
+	float: left;
+	position: fixed;
 }
 
 * {
