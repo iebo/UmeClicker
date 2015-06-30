@@ -18,3 +18,9 @@ function showMoney(){
 	document.getElementById("money").innerHTML = taxMoney + "kr";
 
 }
+
+function buyUpgrade (baseCost){
+	taxMoney -= baseCost;
+	taxPerPop ++;
+	showMoney()
+}
