@@ -19,16 +19,16 @@
 
 		<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="showPopulation(); populationCount += clickIncrease; " value="">
 
-		<div>
+		<div class="container" id="informationTableyThingy">
 			<h3>Population</h3>
-			<h3 id="population">1</h3>
-			<h3>Money</h3>
-			<h3 id="money">0 kr</h3>
-			<h4>Tax</h4>
-			<h4 id="taxRate">1 kr per inhabitant</h4>
-
+			<ul class="list-group">
+				<li class="list-group-item"><h3 id="population">1</h3></li>
+				<li class="list-group-item"><h3>Money</h3></li>
+				<li class="list-group-item"><h3 id="money">0 kr</h3></li>
+				<li class="list-group-item"><h4>Tax</h4></li>
+				<li class="list-group-item"><h4 id="taxRate">1 kr per inhabitant</h4></li>
+			</ul>
 		</div>
-		
 
 		<div class="container" id="upgradelist" >
 		  <h2>Upgrades</h2>
@@ -38,7 +38,7 @@
 		    <li class="list-group-item">Third item</li>
 		  </ul>
 		</div>
-		
+
 		<script src="main.js"></script>	
 	</body>
 

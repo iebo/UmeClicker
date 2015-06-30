@@ -3,11 +3,9 @@
 	margin: auto;
 	float: left;
 	position: fixed;
+	display: inline-block;
 }
 
-* {
-	text-align: center;
-}
 header{
 	background-color: green;
 	text-align: center;
@@ -25,6 +23,17 @@ header{
 	font-size: 50px;
 }
 
-#population{
+#informationTableyThingy{
+	display: inline-block;
+	width: 300px;
+	margin: 0px;
+	
+	padding: 0px;
+	border: 0px;
+}
 
+#upgradelist{
+	float: right;
+	width: 200px;
+	margin-right: 0px;
 }
