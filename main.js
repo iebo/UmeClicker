@@ -23,4 +23,6 @@ function buyUpgrade (baseCost){
 	taxMoney -= baseCost;
 	taxPerPop ++;
 	showMoney()
+	document.getElementById("taxRate").innerHTML = taxPerPop + "kr per inhabitants";
+
 }
