@@ -14,3 +14,7 @@ function taxes(){
 		document.getElementById("money").innerHTML = taxMoney + "kr";
 }, 5000);
 }
+function showMoney(){
+	document.getElementById("money").innerHTML = taxMoney + "kr";
+
+}
