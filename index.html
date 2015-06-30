@@ -10,21 +10,29 @@
 
 	</head>
 
-	<body>
+	<body onload="taxes()">
 
-	<header>
-		<h2 id="mainHeadline">UmeClicker</h2>
-	</header>
+		<header>
+			<h2 id="mainHeadline">UmeClicker</h2>
+		</header>
 
 
-	<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="showPopulation(); populationCount += clickIncrease" value="">
+		<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="showPopulation(); populationCount += clickIncrease; " value="">
 
-	<div>
-		<h3>Population</h3>
-		<h3 id="population">0</h3>
-	</div>
+		<div>
+			<h3>Population</h3>
+			<h3 id="population">1</h3>
+			<h3>money</h3>
+			<h3 id="money">0 kr</h3>
+
+		</div>
 		
-	<script src="main.js"></script>	
+		<h3>
+		<div id="upgrade list">
+
+		</div>
+		
+		<script src="main.js"></script>	
 	</body>
 
 
