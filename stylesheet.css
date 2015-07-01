@@ -61,8 +61,23 @@ header{
 	color: white;
 }
 
+
+
 #smallFooter {
 	background-color: green;
 	height: 3%;
 	bottom: 9%;
+}
+
+#saveButton{
+	margin-top: 1%;
+	color:black;
+	float: right;
+}
+
+#deleteButton{
+	margin-top: 1%;
+	color:black;
+	margin-right: 1%;
+	float: right;	
 }

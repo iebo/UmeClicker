@@ -11,7 +11,7 @@
 
 	</head>
 
-	<body onload="taxes()">
+	<body onload="taxes(), loadGame(), updateData()">
 
 		<header>
 			<h2 id="mainHeadline">UmeClicker</h2>
@@ -38,15 +38,22 @@
 		    <li class="list-group-item">Third item</li>
 		  </ul>
 		</div>
-		
+
 		<footer class="footer">
 	      <div class="container">
-  		      <br><p>Made during the project MakeIT 2015 in Umeå, Sweden.</p>
+  			<button id="saveButton" type"button" onclick="saveGame()">Save</button>
+  			<button id="deleteButton" type"button" onclick="deleteGame()">Delete save</button>
+
+
+  		    <br><p>Made during the project MakeIT 2015 in Umeå, Sweden.</p>
+			
 	      </div>
 	    </footer>
+
 	    <footer id="smallFooter" class="footer">
 	      <div class="container">
-  		      <p class="text-muted"></p>
+  		    <p class="text-muted"></p>
+
 	      </div>
 	    </footer>
 
