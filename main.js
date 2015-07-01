@@ -1,6 +1,6 @@
 var populationCount = 1;
 var clickIncrease = 1; //amount population increase for each click
-var taxMoney = 10000000000000000; 
+var taxMoney = 1; 
 var taxPerPop = 1; //amount tax gained every five seconds for each inhabitant
 
 //variables for number of each upgrade bought
