@@ -1,6 +1,6 @@
 var populationCount = 1;
 var clickIncrease = 1; //amount population increase for each click
-var taxMoney = 1; 
+var taxMoney = 10000000000000000; 
 var taxPerPop = 1; //amount tax gained every five seconds for each inhabitant
 
 //variables for number of each upgrade bought
@@ -25,13 +25,13 @@ function showMoney(){
 }
 
 function buyMoneyUpgrade (baseCost, baseIncrease){
-	cost = baseCost + baseCost * taxCollectors; 
+	cost = costIncrease (baseCost, taxCollectors); 
 	if (taxMoney >= cost){
 		taxMoney -= cost;
 		taxPerPop += baseIncrease;
 		taxCollectors ++;
 		showMoney();
-		document.getElementById("taxRate").innerHTML = taxPerPop + "kr per inhabitants";
+		document.getElementById("taxRate").innerHTML = taxPerPop + " kr per inhabitants";
 		document.getElementById("taxCollectorCost").innerHTML = cost + baseCost;
 
 	} else {
@@ -41,15 +41,19 @@ function buyMoneyUpgrade (baseCost, baseIncrease){
 
 }
 
+function costIncrease (baseCost, upgradeNumber){ //
+	return baseCost * Math.pow(10, upgradeNumber); 
+};
+
 
 function buyPopUpgrade (baseCost, baseIncrease){
-	cost = baseCost + baseCost * realtors; 
+	cost = costIncrease(baseCost, realtors); 
 	if (taxMoney >= cost){
 		taxMoney -= cost;
 		clickIncrease += baseIncrease;
 		realtors ++;
 		showMoney();
-		document.getElementById("popPerClick").innerHTML = clickIncrease + "population per click";
+		document.getElementById("popPerClick").innerHTML = clickIncrease + " inhabitants per click";
 		document.getElementById("realtorCost").innerHTML = cost + baseCost;
 
 	} else {
