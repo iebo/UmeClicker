@@ -2,9 +2,10 @@
 <html lang = "sv">
 
 	<head>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 		<title>UmeClicker</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -20,14 +21,10 @@
 		<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="showPopulation(); populationCount += clickIncrease; " value="">
 
 		<div class="container" id="informationTableyThingy">
-			<h3>Population</h3>
-			<ul class="list-group">
-				<li class="list-group-item"><h3 id="population">1</h3></li>
-				<li class="list-group-item"><h3>Money</h3></li>
-				<li class="list-group-item"><h3 id="money">0 kr</h3></li>
-				<li class="list-group-item"><h4>Tax</h4></li>
-				<li class="list-group-item"><h4 id="taxRate">1 kr per inhabitant</h4></li>
-			</ul>
+			<h3>Population size: </h3><h4 id="population">1</h4>
+				<h3>Money</h3>
+				<h4 id="money">0 kr</h4>
+				<h3>Taxrate</h3><h4 id="taxRate">1 kr per inhabitant</h4>
 		</div>
 
 		<div class="container" id="upgradelist" >
