@@ -1,9 +1,15 @@
+body{
+	background-color:  #FFF5BD;
+	/*#FCEFA4*/
+}
+
 #radhuset {
-	width: 40%;
+	width: 35%;
 	margin: auto;
 	float: left;
 	position: fixed;
 	display: inline-block;
+	margin-top: 55px;
 }
 
 header{
@@ -26,10 +32,8 @@ header{
 #informationTableyThingy{
 	display: inline-block;
 	width: 300px;
-	margin: 0px;
-	
-	padding: 0px;
-	border: 0px;
+	height: 100px;
+	margin-top: 355px;
 }
 
 #upgradelist{
