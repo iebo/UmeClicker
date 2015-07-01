@@ -32,7 +32,7 @@ function buyMoneyUpgrade (baseCost, baseIncrease){
 		taxCollectors ++;
 		showMoney();
 		document.getElementById("taxRate").innerHTML = taxPerPop + " kr per inhabitants";
-		document.getElementById("taxCollectorCost").innerHTML = cost + baseCost;
+		document.getElementById("taxCollectorCost").innerHTML = costIncrease(baseCost, taxCollectors + 1);
 
 	} else {
 		alert("You do not have enough money.")
