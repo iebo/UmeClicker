@@ -41,14 +41,15 @@ function buyMoneyUpgrade (baseCost, baseIncrease){
 
 }
 
+
 function buyPopUpgrade (baseCost, baseIncrease){
 	cost = baseCost + baseCost * realtors; 
 	if (taxMoney >= cost){
 		taxMoney -= cost;
 		clickIncrease += baseIncrease;
-		taxCollectors ++;
+		realtors ++;
 		showMoney();
-		document.getElementById("taxRate").innerHTML = popPerClick + "kr per inhabitants";
+		document.getElementById("popPerClick").innerHTML = clickIncrease + "population per click";
 		document.getElementById("realtorCost").innerHTML = cost + baseCost;
 
 	} else {
