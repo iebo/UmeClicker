@@ -108,5 +108,10 @@ function loadGame (){
 }
 
 function deleteGame(){
-	localStorage.removeItem("save")
+	if (confirm("Are you sure you want to delete your game permanently") == true){
+			localStorage.removeItem("save");
+			location.reload();
+
+	};
+
 }
