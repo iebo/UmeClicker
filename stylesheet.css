@@ -46,10 +46,17 @@ header{
 }
 
 .footer{
-	background-color: green;
+	background-color: #005E0E;
 	height:60px;
 	width:100%;
 	text-align: center;
 	bottom: 0;
 	position: absolute;
+	color: white;
+}
+
+#smallFooter {
+	background-color: green;
+	height: 20px;
+	bottom: 60px;
 }
