@@ -56,7 +56,7 @@ function buyMoneyUpgrade (baseCost, baseIncrease){
 		taxCollectors ++;
 		showMoney();
 		document.getElementById("taxRate").innerHTML = taxPerPop + " kr per inhabitants";
-		document.getElementById("taxCollectorCost").innerHTML = cost + baseCost;
+		document.getElementById("taxCollectorCost").innerHTML = costIncrease(baseCost, taxCollectors + 1);
 		taxCollectorCost = baseCost;
 	} else {
 		alert("You do not have enough money.")
@@ -74,7 +74,7 @@ function buyPopUpgrade (baseCost, baseIncrease){
 		realtors ++;
 		showMoney();
 		document.getElementById("popPerClick").innerHTML = clickIncrease + " inhabitants per click";
-		document.getElementById("realtorCost").innerHTML = cost + baseCost;
+		document.getElementById("realtorCost").innerHTML = costIncrease (realtorCost, realtors + 1);
 		realtorCost = baseCost
 	} else {
 		alert("You do not have enough money.")
