@@ -40,15 +40,17 @@ header{
 
 #upgradelist{
 	float: right;
-	width: 200px;
+	width: 300px;
 	margin-right: 0px;
 	display: inline-block;
 }
 
-.upgradePictures {
-	width: 100px;
-	height: 100px;
-	border-radius: 2px;
+p {
+	display: inline-block;
+}
+
+.buyButton {
+	float: right;
 }
 
 .footer{
