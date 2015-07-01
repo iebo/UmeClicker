@@ -24,6 +24,12 @@ function showMoney(){
 
 }
 
+function costIncrease (baseCost, upgradeNumber){ //
+	return baseCost * Math.pow(10, upgradeNumber); 
+};
+
+
+
 function buyMoneyUpgrade (baseCost, baseIncrease){
 	cost = costIncrease (baseCost, taxCollectors); 
 	if (taxMoney >= cost){
@@ -41,9 +47,6 @@ function buyMoneyUpgrade (baseCost, baseIncrease){
 
 }
 
-function costIncrease (baseCost, upgradeNumber){ //
-	return baseCost * Math.pow(10, upgradeNumber); 
-};
 
 
 function buyPopUpgrade (baseCost, baseIncrease){
