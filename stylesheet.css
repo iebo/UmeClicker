@@ -41,3 +41,9 @@ header{
 	width: 200px;
 	margin-right: 0px;
 }
+
+.footer{
+	background-color: green;
+	height:60px;
+	text-align: center;
+}
