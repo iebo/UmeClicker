@@ -1,6 +1,6 @@
-var populationCount = 1;
+var populationCount = 199999;
 var clickIncrease = 1; //amount population increase for each click
-var taxMoney = 1; 
+var taxMoney = 10000000; 
 var taxPerPop = 1; //amount tax gained every ten seconds for each inhabitant
 var populationGrowth = 0  // population growth every five second(inhabitants added)
 
@@ -14,6 +14,10 @@ var taxCollectorCost = 100;
 var realtorCost = 1000;
 var advertiserCost = 10000;
 
+var past200 = 0;
+
+
+
 function showPopulation(){
 	document.getElementById("population").innerHTML = populationCount + 1;
 	return populationCount;
@@ -23,7 +27,7 @@ function showPopulation(){
 
 function updateData(){ //updates all data points with correcct values
 	document.getElementById("population").innerHTML = populationCount;
-	document.getElementById("money").innerHTML = taxMoney + " kr";
+	document.getElementById("money").innerHTML = (taxMoney + " kr").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 	document.getElementById("taxRate").innerHTML = taxPerPop + " kr per inhabitants";
 	document.getElementById("populationGrowth").innerHTML = "+ " + populationGrowth + " population every five seconds";
 	document.getElementById("popPerClick").innerHTML = clickIncrease + " inhabitants per click";
@@ -39,7 +43,7 @@ function taxes(){
 		document.getElementById("money").innerHTML = taxMoney + " kr";
   		populationCount += populationGrowth;
 		document.getElementById("population").innerHTML = populationCount;
-
+		check200();
 }, 10000);
 }
 
@@ -107,6 +111,25 @@ function buyPopUpgrade (baseCost, baseIncrease){
 
 }
 
+function check200(){
+	if (populationCount >= 200000 && past200 === 0){
+		addImage("Umea2012.jpg", "heart")
+		past200 += 1;
+	}
+}
+
+function addImage(imageLink, imageID) {
+			    var x = document.createElement("IMG");
+			    var imageLink;
+			    var imageID;
+			    x.setAttribute("src", imageLink);
+			    x.setAttribute("width", "100");
+			    x.setAttribute("width", "100");
+			    x.setAttribute("alt", imageID);
+			    document.body.appendChild(x);
+}
+
+
 function saveGame (){
 	var save = {
 		populationCount: populationCount,
@@ -134,6 +157,7 @@ function loadGame (){
 	if (typeof savegame.advertisers !== "undefined") advertisers = savegame.advertisers;
 	if (typeof savegame.populationGrowth !== "undefined") populationGrowth = savegame.populationGrowth;
 
+	check200();
 
 }
 
