@@ -28,23 +28,25 @@
 				<h3>Taxrate: </h3><h4 id="taxRate">1 kr per inhabitant</h4>
 				<h3>Growth: </h3><h4 id="populationGrowth">+ 0 population every five seconds</h4>
 
+
 		</div>
 
 		<div class="container" id="upgradelist" >
 		  <h2>Upgrades</h2>
 		  <ul class="list-group">
-		    <li class="list-group-item">Tax collectors <br> cost:<p id="taxCollectorCost">100kr </p><button type="button" onclick="buyMoneyUpgrade(taxCollectorCost, 1)"> Buy </button> </li>
-		    <li class="list-group-item">Realtor<br> cost:<p id="realtorCost">1000kr </p><button type="button" onclick="buyPopUpgrade(realtorCost, 1)"> Buy </button> </li>
-		    <li class="list-group-item">Realtor<br> cost:<p id="realtorCost">1000kr </p><button type="button" onclick="buyPopUpgrade(realtorCost, 1)"> Buy </button> </li>
-		    <li class="list-group-item">Advertisements<br> cost:<p id="advertiserCost">10000kr </p><button type="button" onclick="buyGrowthUpgrade(advertiserCost, 1)"> Buy </button> </li>
+
+		    <li class="list-group-item">Tax collectors <br> cost:<p id="taxCollectorCost">100 kr </p><button type="button" onclick="buyMoneyUpgrade(taxCollectorCost, 1)" class="btn btn-success" > Buy </button> </li>
+		    <li class="list-group-item">Realtor<br> cost:<p id="realtorCost">1000 kr </p><button type="button" class="btn btn-success" onclick="buyPopUpgrade(realtorCost, 1)"> Buy </button> </li>
+		    <li class="list-group-item">Advertisements<br> cost:<p id="advertiserCost">10000 kr </p><button type="button" class="btn btn-success"  onclick="buyGrowthUpgrade(advertiserCost, 1)"> Buy </button> </li>
+
 
 		  </ul>
 		</div>
 
 		<footer class="footer">
 	      <div class="container">
-  			<button id="saveButton" type"button" onclick="saveGame()">Save</button>
-  			<button id="deleteButton" type"button" onclick="deleteGame()">Delete save</button>
+  			<button id="saveButton" type"button" onclick="saveGame()" class="btn btn-default">Save</button>
+  			<button id="deleteButton" type"button" onclick="deleteGame()" class="btn btn-default">Delete save</button>
 
 
   		    <br><p>Made during the project MakeIT 2015 in Umeå, Sweden.</p>
