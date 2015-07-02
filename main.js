@@ -10,7 +10,7 @@ var realtors = 0;
 var advertisers = 0;
 
 //cost of upgrades
-var taxCollectorCost = 100;
+var taxCollectorCost = 200;
 var realtorCost = 1000;
 var advertiserCost = 10000;
 
