@@ -11,14 +11,14 @@
 
 	</head>
 
-	<body onload="taxes(), loadGame(), updateData()">
+	<body onload="taxes(), updateData(), loadGame()">
 
 		<header>
 			<h2 id="mainHeadline">UmeClicker</h2>
 		</header>
 
 
-		<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="showPopulation(); populationCount += clickIncrease; " value="">
+		<INPUT type="image" src="Umeå_radhus.jpg" id="radhuset" onclick="clickRadhuset();" value="">
 
 		<div class="container" id="informationTableyThingy">
 
@@ -26,7 +26,7 @@
 				<h3>Population increase: </h3><h4 id="popPerClick">1 inhabitant per click</h4>
 				<h3>Money: </h3><h4 id="money">0 kr</h4>
 				<h3>Taxrate: </h3><h4 id="taxRate">1 kr per inhabitant</h4>
-				<h3>Growth: </h3><h4 id="populationGrowth">+ 0 population every five seconds</h4>
+				<h3>Growth: </h3><h4 id="populationGrowth">+ 0 population every ten seconds</h4>
 
 
 		</div>
@@ -40,7 +40,6 @@
 		  </ul>
 		</div>
 
-		<img id="heart" src="Umea2012.jpg">
 
 		<footer class="footer">
 	      <div class="container">
