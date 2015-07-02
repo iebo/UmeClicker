@@ -20,7 +20,7 @@ header{
 	height: 55px;
 	position: fixed;
 	margin: auto;
-
+	z-index: 500;
 }
 
 #mainHeadline{
@@ -81,6 +81,7 @@ p {
 	position: absolute;
 	position: fixed;
 	color: white;
+	z-index: 400;
 }
 
 
@@ -90,6 +91,7 @@ p {
 	height: 3%;
 	bottom: 9%;
 	position: fixed;
+	z-index: 300;
 }
 
 #saveButton{
