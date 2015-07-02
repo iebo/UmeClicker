@@ -1,6 +1,6 @@
 var populationCount = 1;
 var clickIncrease = 1; //amount population increase for each click
-var taxMoney = 1; 
+var taxMoney = 0; 
 var taxPerPop = 1; //amount tax gained every ten seconds for each inhabitant
 var populationGrowth = 0  // population growth every ten seconds(inhabitants added)
 
@@ -37,8 +37,8 @@ function updateData(){ //updates all data points with correcct values
 
 function taxes(){
 	setInterval(function(){ 
-  		taxMoney += populationCount * taxPerPop;
   		populationCount += populationGrowth;
+  		taxMoney += populationCount * taxPerPop;
 		check200();
 		updateData();
 		saveGame();
@@ -123,7 +123,9 @@ function addImage(imageLink, imageID) {
 			    x.setAttribute("width", "100");
 			    x.setAttribute("width", "100");
 			    x.setAttribute("alt", imageID);
+			    x.setAttribute("id", imageID);
 			    document.body.appendChild(x);
+
 }
 
 
