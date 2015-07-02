@@ -50,7 +50,7 @@ function showMoney(){
 }
 
 function costIncrease (baseCost, upgradeNumber){ //
-	return baseCost + Math.pow(10, upgradeNumber); 
+	return baseCost + Math.pow(upgradeNumber, 2) + upgradeNumber * baseCost * 2; 
 
 };
 
