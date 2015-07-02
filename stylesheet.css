@@ -65,7 +65,9 @@ p {
 
 #heart {
 	width: 15%;
-	margin-left: 50%;
+	position: absolute;
+	margin-top: 30%;
+	margin-right: 20%;
 }
 
 .footer{
