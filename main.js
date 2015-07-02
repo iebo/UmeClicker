@@ -1,6 +1,6 @@
 var populationCount = 199999;
 var clickIncrease = 1; //amount population increase for each click
-var taxMoney = 10000000; 
+var taxMoney = 100000000; 
 var taxPerPop = 1; //amount tax gained every ten seconds for each inhabitant
 var populationGrowth = 0  // population growth every five second(inhabitants added)
 
@@ -27,7 +27,7 @@ function showPopulation(){
 
 function updateData(){ //updates all data points with correcct values
 	document.getElementById("population").innerHTML = populationCount;
-	document.getElementById("money").innerHTML = (taxMoney + " kr").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	document.getElementById("money").innerHTML = (""+taxMoney).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " kr" ;
 	document.getElementById("taxRate").innerHTML = taxPerPop + " kr per inhabitants";
 	document.getElementById("populationGrowth").innerHTML = "+ " + populationGrowth + " population every five seconds";
 	document.getElementById("popPerClick").innerHTML = clickIncrease + " inhabitants per click";

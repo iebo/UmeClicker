@@ -52,6 +52,8 @@ header{
 	margin-top: 75px;
 	margin-right: 100px;
 	display: inline-block;
+	
+
 
 }
 
@@ -65,9 +67,9 @@ p {
 
 #heart {
 	width: 15%;
-	margin-left: 50%;
 	position: absolute;
-	display: inline;
+	margin-top: 30%;
+	margin-right: 10%;
 }
 
 .footer{
