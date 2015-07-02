@@ -38,11 +38,21 @@ header{
 	margin-left: 43%;
 }
 
+#listHeader {
+	padding-top: 0px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+
+}
+
 #upgradelist{
 	float: right;
 	width: 300px;
-	margin-right: 0px;
+	margin: 1.5%;
+	margin-top: 75px;
+	margin-right: 100px;
 	display: inline-block;
+
 }
 
 p {
@@ -51,6 +61,11 @@ p {
 
 .buyButton {
 	float: right;
+}
+
+#heart {
+	width: 15%;
+	margin-left: 50%;
 }
 
 .footer{
