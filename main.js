@@ -10,13 +10,11 @@ var realtors = 0;
 var advertisers = 0;
 
 //cost of upgrades
-var taxCollectorCost = 100;
+var taxCollectorCost = 200;
 var realtorCost = 1000;
 var advertiserCost = 10000;
 
 var past200 = 0;//makes so that the congratulation thing only pops up once
-var gameSaved = 0;
-
 
 function showPopulation(){
 	document.getElementById("population").innerHTML = ("" + populationCount + 1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
@@ -29,7 +27,7 @@ function updateData(){ //updates all data points with correcct values
 	document.getElementById("population").innerHTML = (""+populationCount).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 	document.getElementById("money").innerHTML = (""+taxMoney).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " kr" ;
 	document.getElementById("taxRate").innerHTML = (""+taxPerPop).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " kr per inhabitants";
-	document.getElementById("populationGrowth").innerHTML = "+ " + (""+populationGrowth).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " population every five seconds";
+	document.getElementById("populationGrowth").innerHTML = "+ " + (""+populationGrowth).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " population every ten seconds";
 	document.getElementById("popPerClick").innerHTML = (""+clickIncrease).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " inhabitants per click";
 	document.getElementById("realtorCost").innerHTML = (""+costIncrease (realtorCost, realtors)).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " kr";	
 	document.getElementById("taxCollectorCost").innerHTML = (""+costIncrease (taxCollectorCost, taxCollectors)).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " kr";
@@ -43,7 +41,7 @@ function taxes(){
   		populationCount += populationGrowth;
 		check200();
 		updateData();
-
+		saveGame();
 }, 10000);
 }
 
@@ -140,25 +138,22 @@ function saveGame (){
 		taxCollectors: taxCollectors,
 		realtors: realtors, 		
 		advertisers: advertisers,
-		
 	}
-	gameSaved = 1;
 	localStorage.setItem("save",JSON.stringify(save));
 
 }
-
 function loadGame (){
-	if (gameSaved === 1)
-		{	var savegame = JSON.parse(localStorage.getItem("save"));
-			if (typeof savegame.populationCount !== "undefined") populationCount = savegame.populationCount;
-			if (typeof savegame.clickIncrease !== "undefined") clickIncrease = savegame.clickIncrease;
-			if (typeof savegame.taxMoney !== "undefined") taxMoney = savegame.taxMoney;
-			if (typeof savegame.taxPerPop !== "undefined") taxPerPop = savegame.taxPerPop;
-			if (typeof savegame.realtors !== "undefined") realtors = savegame.realtors;
-			if (typeof savegame.taxCollectors !== "undefined") taxCollectors = savegame.taxCollectors;
-			if (typeof savegame.advertisers !== "undefined") advertisers = savegame.advertisers;
-			if (typeof savegame.populationGrowth !== "undefined") populationGrowth = savegame.populationGrowth;
-	}
+
+	var savegame = JSON.parse(localStorage.getItem("save"));
+		if (typeof savegame.populationCount !== "undefined") populationCount = savegame.populationCount;
+		if (typeof savegame.clickIncrease !== "undefined") clickIncrease = savegame.clickIncrease;
+		if (typeof savegame.taxMoney !== "undefined") taxMoney = savegame.taxMoney;
+		if (typeof savegame.taxPerPop !== "undefined") taxPerPop = savegame.taxPerPop;
+		if (typeof savegame.realtors !== "undefined") realtors = savegame.realtors;
+		if (typeof savegame.taxCollectors !== "undefined") taxCollectors = savegame.taxCollectors;
+		if (typeof savegame.advertisers !== "undefined") advertisers = savegame.advertisers;
+		if (typeof savegame.populationGrowth !== "undefined") populationGrowth = savegame.populationGrowth;
+	
 	check200();
 
 }
